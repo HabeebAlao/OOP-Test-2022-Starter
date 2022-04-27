@@ -17,7 +17,12 @@ public class NematodeVisualiser extends PApplet
 	{		
 		if (keyCode == LEFT)
 		{
+			System.out.println("pressed");
 		}		
+		if (keyCode == RIGHT)
+		{
+			System.out.println("pressed");
+		}	
 	}
 
 	public void settings()
@@ -39,9 +44,10 @@ public class NematodeVisualiser extends PApplet
 
 		for(TableRow ROW:table.rows())
 		{
-			println(ROW);
+			
 			Nematode nematode = new Nematode(ROW);
 			nematodes.add(nematode);
+			println(nematode);
 		}
 
 	}
