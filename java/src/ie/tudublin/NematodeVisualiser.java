@@ -12,18 +12,25 @@ public class NematodeVisualiser extends PApplet
 	ArrayList <Nematode> nematodes = new ArrayList<Nematode>();
 
 	
-
+	int X = 6;
 
 
 	public void keyPressed()
 	{		
 		if (keyCode == LEFT)
 		{
-			System.out.println("pressed");
+			System.out.println("pressed LEFT");
+			if (1 <= X-1)
+				X--;
+				System.out.println(X);
 		}		
 		if (keyCode == RIGHT)
 		{
-			System.out.println("pressed");
+			System.out.println("pressed RIGHT");
+			
+			if (X+1 <= 12)
+				X++;
+				System.out.println(X);
 		}	
 	}
 
@@ -54,6 +61,10 @@ public class NematodeVisualiser extends PApplet
 
 	}
 
+	public void update(){
+
+	}
+
 	
 
 	public void draw()
@@ -81,6 +92,10 @@ public class NematodeVisualiser extends PApplet
 		//lef up slant 
 		line(cx - 150, cy, cx-80, cy+20);
 
+		for (int i = 0; i < nematodes.get(X).getLength() ; i++) {
+			
+					
+		}
 
 
 	}
