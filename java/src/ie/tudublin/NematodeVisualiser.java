@@ -78,35 +78,68 @@ public class NematodeVisualiser extends PApplet
 		stroke(118, 218, 193);
 
 
-		//right down slant 
-		line(cx + 70, cy-20, cx+150, cy);
-		//horizontal line right
-		line(cx + 50, cy, cx+150, cy);
-		//right up slant
-		line(cx + 70, cy+20, cx+150, cy);
-
-
-		// left down slant
-		line(cx - 150, cy, cx-80, cy-20);
-		// horizontal line left
-		line(cx - 150, cy, cx-50, cy);
-		//lef up slant 
-		line(cx - 150, cy, cx-80, cy+20);
+		
 
 		
 
 		for (int i = 0; i < nematodes.get(X).getLength() ; i++) {
+			//right down slant 
+			line(cx + 70, cy-20, cx+150, cy);
+			//horizontal line right
+			line(cx + 50, cy, cx+150, cy);
+			//right up slant
+			line(cx + 70, cy+20, cx+150, cy);
+
+
+			// left down slant
+			line(cx - 150, cy, cx-80, cy-20);
+			// horizontal line left
+			line(cx - 150, cy, cx-50, cy);
+			//lef up slant 
+			line(cx - 150, cy, cx-80, cy+20);
 			
 			fill(0,0,0);
-			//left limb
+
 			
 			circle(cx, (cy + 70) - i * 30, 30);
 
-			//right limb
+			if (nematodes.get(X).getLimbs() == 1) {
 			
-			
-		}
 
+				//left limb
+				line(cx - 18,  ((cy + 70) - i * 30), cx-40,  (cy + 70) - i * 30);
+				//right limb
+				
+				line(cx + 18,  ((cy + 70) - i * 30), cx+40,  (cy + 70) - i * 30);
+			}
+
+
+
+
+			if (nematodes.get(X).getGender() == "m") {
+
+			}
+
+			if (nematodes.get(X).getGender() == "f") {
+
+			}
+
+			if (nematodes.get(X).getGender() == "h") {
+
+			}
+
+			if (nematodes.get(X).getGender() == "n") {
+
+			}
+
+
+			
+
+			if (nematodes.get(X).getEyes() == 1) {
+
+			}
+
+		}
 
 	}
 }
