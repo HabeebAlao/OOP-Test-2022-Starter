@@ -61,9 +61,7 @@ public class NematodeVisualiser extends PApplet
 
 	}
 
-	public void update(){
-
-	}
+	
 
 	
 
@@ -75,7 +73,7 @@ public class NematodeVisualiser extends PApplet
     	int cx = this.width / 2;
 
 		// color of lines
-		stroke(118, 218, 193);
+		stroke(118+X*7, 218+X*3, 193+X*6);
 
 
 		
@@ -113,11 +111,23 @@ public class NematodeVisualiser extends PApplet
 				line(cx + 18,  ((cy + 70) - i * 30), cx+40,  (cy + 70) - i * 30);
 			}
 
+			fill(118+X*2, 218+X*3, 193+X*6);
+			textAlign(CENTER);
+			textSize(40);
+			text("im habeeb and i like OOP and its cool", cx, 150);
+
+			fill(118+X*7, 218+X*3, 193+X*6);
+			textAlign(CENTER);
+			textSize(100);
+			text(nematodes.get(X).getName(), cx, 100);
 
 
 
 			if (nematodes.get(X).getGender() == "m") {
-
+				
+				if(i == 0){
+					line(cx, ((cy + 70) - i * 30) + 30, cx, ((cy + 70) - i * 30)+ 60);
+				}
 			}
 
 			if (nematodes.get(X).getGender() == "f") {
@@ -136,7 +146,12 @@ public class NematodeVisualiser extends PApplet
 			
 
 			if (nematodes.get(X).getEyes() == 1) {
-
+				if (i + 1 == nematodes.get(X).getLength()) {
+					line(cx+5,  ((cy + 70) - i * 30)-15, cx+20, ((cy + 70) - i * 30)-30);
+					line(cx-5,  ((cy + 70) - i * 30)-15, cx-20, ((cy + 70) - i * 30)-30);
+					circle(cx-20, ((cy + 70) - i * 30)-30, 10);
+					circle(cx+20, ((cy + 70) - i * 30)-30, 10);
+				}
 			}
 
 		}
