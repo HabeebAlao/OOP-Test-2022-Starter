@@ -11,6 +11,8 @@ public class NematodeVisualiser extends PApplet
 
 	ArrayList <Nematode> nematodes = new ArrayList<Nematode>();
 
+	
+
 
 
 	public void keyPressed()
@@ -52,9 +54,34 @@ public class NematodeVisualiser extends PApplet
 
 	}
 
+	
 
 	public void draw()
 	{	
+
+		int cy = this.height / 2;
+    	int cx = this.width / 2;
+
+		// color of lines
+		stroke(118, 218, 193);
+
+
+		//right down slant 
+		line(cx + 70, cy-20, cx+150, cy);
+		//horizontal line right
+		line(cx + 50, cy, cx+150, cy);
+		//right up slant
+		line(cx + 70, cy+20, cx+150, cy);
+
+
+		// left down slant
+		line(cx - 150, cy, cx-80, cy-20);
+		// horizontal line left
+		line(cx - 150, cy, cx-50, cy);
+		//lef up slant 
+		line(cx - 150, cy, cx-80, cy+20);
+
+
 
 	}
 }
