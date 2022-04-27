@@ -76,6 +76,10 @@ public class Nematode {
         this.eyes = eyes;
     }
 
+    @Override
+    public String toString() {
+        return "Namatode -> [name= " + name + ", length=" + length + ", limbs=" + limbs + ", gender=" + gender + ", eyes=" + eyes + "]";
+    }
     
     
 }
