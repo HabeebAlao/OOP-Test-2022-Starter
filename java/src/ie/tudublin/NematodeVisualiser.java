@@ -23,7 +23,7 @@ public class NematodeVisualiser extends PApplet
 	public void settings()
 	{
 		size(800, 800);
-	}
+		loadNematodes();	}
 
 	public void setup() 
 	{
@@ -37,11 +37,18 @@ public class NematodeVisualiser extends PApplet
 	{
 		Table table = loadTable("OOP-Test-2022-Starter/data/nematodes.csv", "header");
 
+		for(TableRow ROW:table.rows())
+		{
+			println(ROW);
+			Nematode nematode = new Nematode(ROW);
+			nematodes.add(nematode);
+		}
+
 	}
 
 
 	public void draw()
 	{	
-		
+
 	}
 }
