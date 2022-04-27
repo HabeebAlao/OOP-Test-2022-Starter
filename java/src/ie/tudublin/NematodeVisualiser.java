@@ -69,6 +69,7 @@ public class NematodeVisualiser extends PApplet
 
 	public void draw()
 	{	
+		background(0);
 
 		int cy = this.height / 2;
     	int cx = this.width / 2;
@@ -92,9 +93,18 @@ public class NematodeVisualiser extends PApplet
 		//lef up slant 
 		line(cx - 150, cy, cx-80, cy+20);
 
+		
+
 		for (int i = 0; i < nematodes.get(X).getLength() ; i++) {
 			
-					
+			fill(0,0,0);
+			//left limb
+			
+			circle(cx, (cy + 70) - i * 30, 30);
+
+			//right limb
+			
+			
 		}
 
 
