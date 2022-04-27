@@ -9,13 +9,16 @@ import processing.data.TableRow;
 public class NematodeVisualiser extends PApplet
 {
 
+	ArrayList <Nematode> nematodes = new ArrayList<Nematode>();
+
+
+
 	public void keyPressed()
 	{		
 		if (keyCode == LEFT)
 		{
 		}		
 	}
-
 
 	public void settings()
 	{
@@ -32,10 +35,13 @@ public class NematodeVisualiser extends PApplet
 
 	public void loadNematodes()
 	{
+		Table table = loadTable("OOP-Test-2022-Starter/data/nematodes.csv", "header");
+
 	}
 
 
 	public void draw()
 	{	
+		
 	}
 }
